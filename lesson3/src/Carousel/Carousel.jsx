@@ -7,7 +7,7 @@ export const Carousel=({images ,intervalSeconds=3})=>{
     return(
         
         <>
-        {images.map((src,index)=>( <CarouselItem key={index} src={src}alt={`image ${index+1}`}/>))}
+        {images.map((src,index)=>(index==selected? <CarouselItem key={index} src={src}alt={`image ${index+1}`}/>:null))}
         </>
         
     )
